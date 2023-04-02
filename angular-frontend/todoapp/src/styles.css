@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+.style-header{
+    background-color:#000000;
+    border-color: #ffffff;
+    font-weight: bold;
+  }
+
+  .style-button-excluir{
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .style-button-salvar{
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .style-home{
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .body{
+    background-color: #282c34;
+  }
+
+  .align-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .style-button-atualizar{
+    background-color:#282c34;
+    border-color: #282c34;
+    font-weight: bold;
+  }
+    
+  .style-button-salvar{
+    background-color:#282c34;
+    border-color: #282c34;
+    font-weight: bold;
+  }
+  
+  .style-button-cancelar{
+    font-weight: bold;
+  }
+
+  .style-button-cadastrar{
+    padding: 15px 20px;
+    background-color:#282c34;
+    border-color: #282c34;
+    font-weight: bold;
+  }
+
+  body {
+    background-color:#282c34;
+  }
+
+  h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .item {
+    display: inline-block;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    text-align: left;
+    text-shadow:none
+  }
+
+  .item-header{
+    color: #ffffff;
+  }

@@ -1,0 +1,27 @@
+<div class="card col-md-12">
+<h2 class="text-center style-title">Minhas Tarefas</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome Tarefa</th>
+            <th>Descrição Tarefa</th>
+            <th>Data Tarefa</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let task of tasks">
+            <td> {{task.nameTask}} </td>
+            <td> {{task.descriptionTask}} </td>
+            <td> {{task.dateTask}} </td>
+            <td>
+                <button (click) = "updateTask(task.idTask)" class="btn btn-info style-button-atualizar"> Atualizar </button>
+                <button (click) = "deleteTask(task.idTask)" class="btn btn-danger" style="margin-left: 10px; font-weight: bold;"> Deletar </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="align-button">
+    <button class="btn btn-info style-button-cadastrar" (click) = "goToCreateTask()"> Cadastrar Tarefa</button>
+</div>
+</div>

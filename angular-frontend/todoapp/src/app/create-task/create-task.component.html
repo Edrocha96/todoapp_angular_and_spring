@@ -1,0 +1,32 @@
+<div class="card col-md-6 offset-md-3 offset-md-3">
+<h2 class="text-center style-title">Criar Tarefa</h2>
+<form (ngSubmit) = "onSubmit()">
+
+    <div class="fomr-group">
+        <label>Nome Tarefa:</label>
+        <input type="text" placeholder="Nome Tarefa" class="form-control" id="nameTask"
+            [(ngModel)] = "task.nameTask" name="nameTask">
+    </div>
+
+    <div class="fomr-group">
+        <label>Descrição Tarefa:</label>
+        <input type="text" placeholder="Descrição Tarefa" class="form-control" id="descriptionTask"
+            [(ngModel)] = "task.descriptionTask" name="descriptionTask">
+    </div>
+
+    <div class="fomr-group ">
+        <label>Data:</label>
+        <input type="text" placeholder="dd/mm/yyyy" class="form-control" id="dateTask"
+            [(ngModel)] = "task.dateTask" name="dateTask">
+    </div>
+
+    <div class="fomr-group ">
+        <label>Hora:</label>
+        <input type="text" placeholder="HH:mm" class="form-control" id="hourTask"
+            [(ngModel)] = "task.hourTask" name="hourTask">
+    </div>
+
+    <button class="btn btn-success style-button-salvar" type = "submit"> Salvar</button>
+    <button class="btn btn-danger  style-button-excluir" type = "submit"> Cancelar</button>
+</form>
+</div>
