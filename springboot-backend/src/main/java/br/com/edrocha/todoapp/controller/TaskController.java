@@ -3,10 +3,11 @@ package br.com.edrocha.todoapp.controller;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,8 +16,6 @@ import br.com.edrocha.todoapp.req.TaskReq;
 import br.com.edrocha.todoapp.resp.TaskResp;
 import br.com.edrocha.todoapp.service.TaskService;
 
-//@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/to-do-app")
 public class TaskController {
@@ -45,13 +44,13 @@ public class TaskController {
 		return ResponseEntity.ok().build();
 	}
 	
-	@PostMapping("/delete-task")
-	public ResponseEntity<Void> deleteTask(@RequestBody String id) {
-		toDoAppService.delete(id);
+	@DeleteMapping("/delete-task/{taskId}")
+	public ResponseEntity<Void> deleteTask(@PathVariable String taskId) {
+		toDoAppService.delete(taskId);
 		return ResponseEntity.ok().build();
 	}
 	
-	@PostMapping("/update-task")
+	@PutMapping("/update-task")
 	public ResponseEntity<Void> updateTask(@RequestBody TaskReq req) {
 		System.out.println("Chegou Atualizar");
 		toDoAppService.update(req);

@@ -36,11 +36,11 @@ export class TaskService {
 
   updateTask(task: Task): Observable<Object>{
     console.log("Task:", task)
-    return this.httpClient.post(`${this.baseURL + this.endpointUpdateTask}`, task);
+    return this.httpClient.put(`${this.baseURL + this.endpointUpdateTask}`, task);
   }
 
   deleteTask(id: number): Observable<Object>{
     console.log("Task:", id)
-    return this.httpClient.post(`${this.baseURL + this.endpointDeleteTask}`, id);
+    return this.httpClient.delete(`${this.baseURL + this.endpointDeleteTask}/${id}`);
   }
 }
