@@ -8,39 +8,29 @@ import { Task } from './task';
 })
 export class TaskService {
 
-  private baseURL = "http://localhost:8080/to-do-app";
-
-  private endpointGetAllTasks = "/all-registers";
-
-  private endpointCreateTask = "/save-task";
-
-  private endpointGetTaskById = "/by-id-registers";
-
-  private endpointUpdateTask = "/update-task";
-
-  private endpointDeleteTask = "/delete-task";
+  private baseURL = "http://localhost:3000/api/tasks";
 
   constructor(private httpClient: HttpClient) { }
 
   getTasksList(): Observable<Task[]>{
-    return this.httpClient.get<Task[]>(`${this.baseURL + this.endpointGetAllTasks}`);
+    return this.httpClient.get<Task[]>(`${this.baseURL}`);
   }
 
   createTask(task: Task): Observable<Object>{
-    return this.httpClient.post(`${this.baseURL + this.endpointCreateTask}`, task);
+    return this.httpClient.post(`${this.baseURL}`, { name: 'diego', description: 'oooi' });
   }
 
   getTaskById(id: number): Observable<Task[]>{
-    return this.httpClient.get<Task[]>(`${this.baseURL + this.endpointGetTaskById}/${id}`);
+    return this.httpClient.get<Task[]>(`${this.baseURL}/${id}`);
   }
 
   updateTask(task: Task): Observable<Object>{
     console.log("Task:", task)
-    return this.httpClient.put(`${this.baseURL + this.endpointUpdateTask}`, task);
+    return this.httpClient.put(`${this.baseURL}`, task);
   }
 
   deleteTask(id: number): Observable<Object>{
     console.log("Task:", id)
-    return this.httpClient.delete(`${this.baseURL + this.endpointDeleteTask}/${id}`);
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
 }

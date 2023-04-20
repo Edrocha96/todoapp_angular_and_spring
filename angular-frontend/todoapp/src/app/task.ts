@@ -1,7 +1,6 @@
 export class Task {
-    idTask: any;
-    nameTask: any;
-    descriptionTask: any;
-    dateTask: any;
-    hourTask:any;
+    id: number = 0;
+    name: String = '';
+    description: string = '';
+    date: Date = new Date();
 }

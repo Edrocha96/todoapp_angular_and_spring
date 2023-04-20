@@ -11,12 +11,12 @@
     </thead>
     <tbody>
         <tr *ngFor = "let task of tasks">
-            <td> {{task.nameTask}} </td>
-            <td> {{task.descriptionTask}} </td>
-            <td> {{task.dateTask}} </td>
+            <td> {{task.name}} </td>
+            <td> {{task.description}} </td>
+            <td> {{task.date}} </td>
             <td>
-                <button (click) = "updateTask(task.idTask)" class="btn btn-info style-button-atualizar"> Atualizar </button>
-                <button (click) = "deleteTask(task.idTask)" class="btn btn-danger" style="margin-left: 10px; font-weight: bold;"> Deletar </button>
+                <button (click) = "updateTask(task.id)" class="btn btn-info style-button-atualizar"> Atualizar </button>
+                <button (click) = "deleteTask(task.id)" class="btn btn-danger" style="margin-left: 10px; font-weight: bold;"> Deletar </button>
             </td>
         </tr>
     </tbody>
