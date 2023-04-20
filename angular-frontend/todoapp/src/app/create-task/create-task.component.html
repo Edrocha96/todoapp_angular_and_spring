@@ -5,25 +5,19 @@
     <div class="fomr-group">
         <label>Nome Tarefa:</label>
         <input type="text" placeholder="Nome Tarefa" class="form-control" id="nameTask"
-            [(ngModel)] = "task.nameTask" name="nameTask">
+            [(ngModel)] = "task.name" name="nameTask">
     </div>
 
     <div class="fomr-group">
         <label>Descrição Tarefa:</label>
         <input type="text" placeholder="Descrição Tarefa" class="form-control" id="descriptionTask"
-            [(ngModel)] = "task.descriptionTask" name="descriptionTask">
+            [(ngModel)] = "task.description" name="descriptionTask">
     </div>
 
     <div class="fomr-group ">
         <label>Data:</label>
         <input type="text" placeholder="dd/mm/yyyy" class="form-control" id="dateTask"
-            [(ngModel)] = "task.dateTask" name="dateTask">
-    </div>
-
-    <div class="fomr-group ">
-        <label>Hora:</label>
-        <input type="text" placeholder="HH:mm" class="form-control" id="hourTask"
-            [(ngModel)] = "task.hourTask" name="hourTask">
+            [(ngModel)] = "task.date" name="dateTask">
     </div>
 
     <button class="btn btn-success style-button-salvar" type = "submit"> Salvar</button>
