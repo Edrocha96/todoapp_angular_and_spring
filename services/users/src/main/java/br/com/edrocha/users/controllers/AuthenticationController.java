@@ -4,6 +4,7 @@ import br.com.edrocha.users.dtos.AuthenticationRequest;
 import br.com.edrocha.users.dtos.AuthenticationResponse;
 import br.com.edrocha.users.dtos.RegisterRequest;
 import br.com.edrocha.users.services.AuthenticationService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +20,7 @@ public class AuthenticationController {
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody RegisterRequest request
-    ) {
+    ) throws JsonProcessingException {
         return ResponseEntity.ok(service.register(request));
     }
     @PostMapping("/authenticate")
